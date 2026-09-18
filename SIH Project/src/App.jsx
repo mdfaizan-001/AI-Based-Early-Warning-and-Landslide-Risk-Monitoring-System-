@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
+
 import Sidebar from './components/Sidebar';
+
 import Navbar from './components/Navbar';
+
 import MetricsGrid from './components/MetricsGrid';
+
 import MapComponent from './components/MapComponent';
+
 import AnalyticsChart from './components/AnalyticsChart';
+
 import AlertsPanel from './components/AlertsPanel';
+
 import SettingsPanel from './components/SettingsPanel';
+
 import './App.css';
 
 function App() {
