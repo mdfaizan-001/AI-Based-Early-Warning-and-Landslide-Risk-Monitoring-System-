@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-
 function SettingsPanel() {
   const [rainThreshold, setRainThreshold] = useState(75);
   const [moistureThreshold, setMoistureThreshold] = useState(80);
   const [autoAlerts, setAutoAlerts] = useState(true);
-
   return (
     <div style={{ background: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', maxWidth: '600px' }}>
       <h3 style={{ marginTop: 0, color: '#0f172a' }}>⚙️ Monitoring & Threshold Settings</h3>
@@ -24,7 +22,6 @@ function SettingsPanel() {
             style={{ width: '100%', cursor: 'pointer' }}
           />
         </div>
-
         <div>
           <label style={{ display: 'block', fontWeight: '600', fontSize: '14px', color: '#334155', marginBottom: '8px' }}>
             Soil Moisture Saturation Limit (%): <span style={{ color: '#ef4444' }}>{moistureThreshold}%</span>
@@ -38,7 +35,6 @@ function SettingsPanel() {
             style={{ width: '100%', cursor: 'pointer' }}
           />
         </div>
-
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '10px', borderTop: '1px solid #f1f5f9' }}>
           <div>
             <strong style={{ fontSize: '14px', color: '#334155' }}>Automated Emergency Broadcast</strong>
@@ -51,7 +47,6 @@ function SettingsPanel() {
             style={{ width: '20px', height: '20px', cursor: 'pointer' }}
           />
         </div>
-
         <button 
           onClick={() => alert('Settings Saved Successfully!')}
           style={{
@@ -71,5 +66,4 @@ function SettingsPanel() {
     </div>
   );
 }
-
 export default SettingsPanel;
