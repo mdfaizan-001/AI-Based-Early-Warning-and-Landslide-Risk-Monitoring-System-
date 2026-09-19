@@ -1,4 +1,5 @@
 import React from 'react';
+
 function Sidebar({ activeTab, setActiveTab }) {
   const menuItems = [
     { id: 'overview', label: 'Overview', icon: '\u{1F4CA}' },   
@@ -7,6 +8,7 @@ function Sidebar({ activeTab, setActiveTab }) {
     { id: 'analytics', label: 'Analytics', icon: '\u{1F4C8}' },   
     { id: 'settings', label: 'Settings', icon: '\u{2699}' },    
   ];
+  
   return (
     <div style={{
       width: '240px',
@@ -21,6 +23,7 @@ function Sidebar({ activeTab, setActiveTab }) {
       flexDirection: 'column',
       boxShadow: '4px 0 10px rgba(0,0,0,0.05)'
     }}>
+      
       {/* Brand Header */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '35px', paddingLeft: '8px' }}>
         <span style={{ fontSize: '24px' }}>{'\u{1F30B}'}</span>
@@ -29,6 +32,7 @@ function Sidebar({ activeTab, setActiveTab }) {
       <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#64748b', fontWeight: '700', marginBottom: '12px', paddingLeft: '8px', letterSpacing: '1px' }}>
         Main Menu
       </div>
+      
       {/* Navigation List */}
       <nav style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         {menuItems.map((item) => {
@@ -60,6 +64,7 @@ function Sidebar({ activeTab, setActiveTab }) {
           );
         })}
       </nav>
+      
       {/* Premium Profile Card Container */}
       <div style={{
         marginTop: 'auto',
@@ -73,6 +78,7 @@ function Sidebar({ activeTab, setActiveTab }) {
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          
           {/* Avatar with Active Online Dot */}
           <div style={{ position: 'relative' }}>
             <div style={{
@@ -109,6 +115,7 @@ function Sidebar({ activeTab, setActiveTab }) {
             </div>
           </div>
         </div>
+        
         {/* Clean Logout Trigger */}
         <button 
           onClick={() => alert('Backend Auth Integration Pending')}
@@ -135,4 +142,5 @@ function Sidebar({ activeTab, setActiveTab }) {
     </div>
   );
 }
+
 export default Sidebar;
