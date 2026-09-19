@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Sidebar({ activeTab, setActiveTab }) {
   const menuItems = [
     { id: 'overview', label: 'Overview', icon: '\u{1F4CA}' },   
@@ -8,7 +7,6 @@ function Sidebar({ activeTab, setActiveTab }) {
     { id: 'analytics', label: 'Analytics', icon: '\u{1F4C8}' },   
     { id: 'settings', label: 'Settings', icon: '\u{2699}' },    
   ];
-
   return (
     <div style={{
       width: '240px',
@@ -28,11 +26,9 @@ function Sidebar({ activeTab, setActiveTab }) {
         <span style={{ fontSize: '24px' }}>{'\u{1F30B}'}</span>
         <h2 style={{ color: '#38bdf8', margin: 0, fontSize: '20px', fontWeight: '700', letterSpacing: '0.5px' }}>GeoMonitor</h2>
       </div>
-
       <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#64748b', fontWeight: '700', marginBottom: '12px', paddingLeft: '8px', letterSpacing: '1px' }}>
         Main Menu
       </div>
-
       {/* Navigation List */}
       <nav style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
         {menuItems.map((item) => {
@@ -64,7 +60,6 @@ function Sidebar({ activeTab, setActiveTab }) {
           );
         })}
       </nav>
-
       {/* Premium Profile Card Container */}
       <div style={{
         marginTop: 'auto',
@@ -105,7 +100,6 @@ function Sidebar({ activeTab, setActiveTab }) {
               border: '2px solid #1e293b'
             }}></span>
           </div>
-
           <div>
             <div style={{ fontSize: '12px', fontWeight: '700', color: '#f8fafc', letterSpacing: '-0.2px' }}>
               Disaster Mgmt
@@ -115,7 +109,6 @@ function Sidebar({ activeTab, setActiveTab }) {
             </div>
           </div>
         </div>
-
         {/* Clean Logout Trigger */}
         <button 
           onClick={() => alert('Backend Auth Integration Pending')}
@@ -142,5 +135,4 @@ function Sidebar({ activeTab, setActiveTab }) {
     </div>
   );
 }
-
 export default Sidebar;
