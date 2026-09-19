@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 function AlertsPanel() {
   const [filter, setFilter] = useState('all');
-
   const alerts = [
     {
       id: 1,
@@ -29,11 +27,9 @@ function AlertsPanel() {
       icon: '\u{1F327}\u{FE0F}' 
     }
   ];
-
   const filteredAlerts = alerts.filter(
     (item) => filter === 'all' || item.type === filter
   );
-
   return (
     <div style={{
       backgroundColor: '#ffffff',
@@ -61,7 +57,6 @@ function AlertsPanel() {
             Real-Time Alerts
           </h3>
         </div>
-
         {/* Filter Pills */}
         <div style={{ display: 'flex', gap: '4px', backgroundColor: '#f1f5f9', padding: '3px', borderRadius: '8px' }}>
           {['all', 'critical', 'warning'].map((type) => (
@@ -87,7 +82,6 @@ function AlertsPanel() {
           ))}
         </div>
       </div>
-
       {/* Feed List */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', overflowY: 'auto' }}>
         {filteredAlerts.map((alert) => {
@@ -123,5 +117,4 @@ function AlertsPanel() {
     </div>
   );
 }
-
 export default AlertsPanel;
