@@ -1,5 +1,4 @@
 import React from 'react';
-
 function MetricsGrid() {
   const metrics = [
     {
@@ -33,7 +32,6 @@ function MetricsGrid() {
       trend: 'Safe Limit: <80%'
     }
   ];
-
   return (
     <div style={{
       display: 'grid',
@@ -75,14 +73,12 @@ function MetricsGrid() {
               {item.icon}
             </span>
           </div>
-
           {/* Main Value */}
           <div style={{ margin: '14px 0 10px 0' }}>
             <h2 style={{ margin: 0, fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>
               {item.value}
             </h2>
           </div>
-
           {/* Bottom Status & Trend */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid #f1f5f9', paddingTop: '10px', marginTop: '5px' }}>
             <span style={{
@@ -104,5 +100,4 @@ function MetricsGrid() {
     </div>
   );
 }
-
 export default MetricsGrid;
