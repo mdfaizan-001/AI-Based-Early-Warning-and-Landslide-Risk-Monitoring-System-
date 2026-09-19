@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Navbar() {
   return (
     <div style={{
@@ -19,7 +18,6 @@ function Navbar() {
           <h1 style={{ margin: 0, fontSize: '20px', fontWeight: '800', color: '#0f172a', letterSpacing: '-0.3px' }}>
             Landslide Monitoring System
           </h1>
-          
           {/* Live Telemetry Badge */}
           <div style={{
             display: 'flex',
@@ -43,7 +41,6 @@ function Navbar() {
             </span>
           </div>
         </div>
-
         {/* Subtitle / Region info */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginTop: '4px' }}>
           <span style={{ fontSize: '12px', color: '#64748b', fontWeight: '500' }}>
@@ -55,7 +52,6 @@ function Navbar() {
           </span>
         </div>
       </div>
-
       {/* Right Controls */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
         <button 
@@ -77,7 +73,6 @@ function Navbar() {
         >
           {'\u{1F504}'} Sync Data
         </button>
-
         <button 
           onClick={() => window.print()}
           style={{
@@ -101,5 +96,4 @@ function Navbar() {
     </div>
   );
 }
-
 export default Navbar;
