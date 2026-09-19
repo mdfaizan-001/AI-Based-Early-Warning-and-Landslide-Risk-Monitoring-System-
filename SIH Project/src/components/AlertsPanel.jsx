@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 function AlertsPanel() {
   const [filter, setFilter] = useState('all');
   const alerts = [
@@ -27,6 +28,7 @@ function AlertsPanel() {
       icon: '\u{1F327}\u{FE0F}' 
     }
   ];
+  
   const filteredAlerts = alerts.filter(
     (item) => filter === 'all' || item.type === filter
   );
@@ -82,6 +84,7 @@ function AlertsPanel() {
           ))}
         </div>
       </div>
+      
       {/* Feed List */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', overflowY: 'auto' }}>
         {filteredAlerts.map((alert) => {
@@ -117,4 +120,5 @@ function AlertsPanel() {
     </div>
   );
 }
+
 export default AlertsPanel;
