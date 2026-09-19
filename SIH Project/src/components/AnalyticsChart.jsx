@@ -13,7 +13,7 @@ const data = [
 function AnalyticsChart() {
   return (
     <div style={{ marginTop: '20px', background: '#f8fafc', padding: '20px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}>
-      <h3 style={{ margin: '0 0 20px 0', color: '#1e293b' }}>📈 Weekly Rainfall & Soil Moisture Trend</h3> 
+      <h3 style={{ margin: '0 0 20px 0', color: '#1e293b' }}> {'\u{1F4C8}'} Weekly Rainfall & Soil Moisture Trend</h3> 
       
       {/* Legend */}
       <div style={{ display: 'flex', gap: '20px', marginBottom: '15px', fontSize: '14px' }}>
