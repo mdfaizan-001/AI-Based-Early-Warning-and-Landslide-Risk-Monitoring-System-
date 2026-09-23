@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-
 function AlertsPanel() {
   const [filter, setFilter] = useState('all');
-  const alerts = [
-    
+  const alerts = [  
     {
       id: 1,
       location: 'Mandi Highway - Sector 4',
@@ -11,8 +9,7 @@ function AlertsPanel() {
       message: 'Soil movement detected (>5.2mm/hr)',
       time: '2 mins ago',
       icon: '\u{1F6A8}' 
-    },
-    
+    },  
     {
       id: 2,
       location: 'Shimla Ridge North',
@@ -20,8 +17,7 @@ function AlertsPanel() {
       message: 'Moisture threshold breached (78%)',
       time: '14 mins ago',
       icon: '\u{26A0}\u{FE0F}' 
-    },
-    
+    }, 
     {
       id: 3,
       location: 'Kullu Bypass Zone B',
@@ -30,12 +26,10 @@ function AlertsPanel() {
       time: '28 mins ago',
       icon: '\u{1F327}\u{FE0F}' 
     }
-  ];
-  
+  ];  
   const filteredAlerts = alerts.filter(
     (item) => filter === 'all' || item.type === filter
-  );
-  
+  ); 
   return (
     <div style={{
       backgroundColor: '#ffffff',
@@ -47,8 +41,7 @@ function AlertsPanel() {
       boxSizing: 'border-box',
       display: 'flex',
       flexDirection: 'column'
-    }}>
-      
+    }}>  
       {/* Header & Filter Tabs */}
       <div style={{
         display: 'flex',
@@ -57,8 +50,7 @@ function AlertsPanel() {
         marginBottom: '16px',
         paddingBottom: '12px',
         borderBottom: '1px solid #f1f5f9'
-      }}>
-        
+      }}> 
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <span style={{ fontSize: '18px' }}>{'\u{1F511}'}</span>
           <h3 style={{ margin: 0, fontSize: '15px', fontWeight: '800', color: '#0f172a' }}>
@@ -84,14 +76,12 @@ function AlertsPanel() {
                 boxShadow: filter === type ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
                 transition: 'all 0.15s ease'
               }}
-            >
-              
+            >   
               {type}
             </button>
           ))}
         </div>
-      </div>
-      
+      </div> 
       {/* Feed List */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', overflowY: 'auto' }}>
         {filteredAlerts.map((alert) => {
@@ -108,8 +98,7 @@ function AlertsPanel() {
                 borderRight: '1px solid rgba(0,0,0,0.03)',
                 borderBottom: '1px solid rgba(0,0,0,0.03)'
               }}
-            >
-              
+            >      
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
                 <span style={{ fontSize: '12px', fontWeight: '800', color: isCritical ? '#991b1b' : '#92400e' }}>
                   {alert.icon} {alert.location}
@@ -128,5 +117,4 @@ function AlertsPanel() {
     </div>
   );
 }
-
 export default AlertsPanel;
