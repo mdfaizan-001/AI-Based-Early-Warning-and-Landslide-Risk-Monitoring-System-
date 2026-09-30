@@ -2,7 +2,6 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
 // Custom Marker Icons (SVG/DivIcon based to avoid broken leaflet asset paths)
 const createCustomIcon = (color) => {
   return L.divIcon({
@@ -19,12 +18,10 @@ const createCustomIcon = (color) => {
     iconAnchor: [10, 10]
   });
 };
-
 const redIcon = createCustomIcon('#dc2626');
 const orangeIcon = createCustomIcon('#d97706');
 const greenIcon = createCustomIcon('#16a34a');
 function MapComponent() {
-  
   // Center coordinates for Himachal Pradesh / NW Himalayan Sector
   const centerPosition = [31.7087, 76.9320];
   const locations = [
@@ -59,7 +56,6 @@ function MapComponent() {
       status: 'Slope Stable'
     }
   ];
-  
   return (
     <div style={{
       backgroundColor: '#ffffff',
@@ -68,8 +64,7 @@ function MapComponent() {
       border: '1px solid #e2e8f0',
       boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
       boxSizing: 'border-box'
-    }}>
-      
+    }}>    
       {/* Map Header */}
       <div style={{
         display: 'flex',
@@ -88,8 +83,7 @@ function MapComponent() {
         <span style={{ fontSize: '11px', color: '#64748b', fontWeight: '600' }}>
           CartoDB Topo Layer • Active Telemetry
         </span>
-      </div>
-      
+      </div>     
       {/* Map Container */}
       <div style={{
         height: '400px',
@@ -103,14 +97,12 @@ function MapComponent() {
           zoom={9} 
           scrollWheelZoom={true} 
           style={{ height: '100%', width: '100%' }}
-        >
-          
+        >   
           {/* High quality clean CartoDB tile layer */}
           <TileLayer
             attribution='&copy; <a href="https://carto.com/">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-          />
-          
+          />    
           {locations.map((loc) => (
             <React.Fragment key={loc.id}>
               {/* Radius Circle overlay for High Risk zones */}
@@ -125,8 +117,7 @@ function MapComponent() {
                   }}
                   radius={5000}
                 />
-              )}
-              
+              )}   
               {/* Marker with Custom Popup */}
               <Marker position={loc.coords} icon={loc.icon}>
                 <Popup style={{ borderRadius: '12px' }}>
@@ -160,5 +151,4 @@ function MapComponent() {
     </div>
   );
 }
-
 export default MapComponent;
