@@ -6,13 +6,17 @@ import MapComponent from './components/MapComponent';
 import AnalyticsChart from './components/AnalyticsChart';
 import AlertsPanel from './components/AlertsPanel';
 import SettingsPanel from './components/SettingsPanel';
+
 import './App.css';
+
 function App() { 
   const [activeTab, setActiveTab] = useState('overview');
   return (
+    
     <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#f8fafc' }}>
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div style={{ flex: 1, padding: '28px 36px', overflowX: 'hidden' }}>  
+      <div style={{ flex: 1, padding: '28px 36px', overflowX: 'hidden' }}> 
+        
         <Navbar />       
         {activeTab === 'overview' && (
           <>
