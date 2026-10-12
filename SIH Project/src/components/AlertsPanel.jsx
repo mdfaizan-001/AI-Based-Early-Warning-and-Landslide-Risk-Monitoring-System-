@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 function AlertsPanel() {
   const [filter, setFilter] = useState('all');
   const alerts = [ 
-    
     {
       id: 1,
       location: 'Mandi Highway - Sector 4',
@@ -11,7 +10,6 @@ function AlertsPanel() {
       time: '2 mins ago',
       icon: '\u{1F6A8}' 
     }, 
-    
     {
       id: 2,
       location: 'Shimla Ridge North',
@@ -20,7 +18,6 @@ function AlertsPanel() {
       time: '14 mins ago',
       icon: '\u{26A0}\u{FE0F}' 
     }, 
-    
     {
       id: 3,
       location: 'Kullu Bypass Zone B',
@@ -30,7 +27,6 @@ function AlertsPanel() {
       icon: '\u{1F327}\u{FE0F}' 
     }
   ]; 
-  
   const filteredAlerts = alerts.filter(
     (item) => filter === 'all' || item.type === filter
   );
@@ -46,7 +42,6 @@ function AlertsPanel() {
       display: 'flex',
       flexDirection: 'column'
     }}>  
-      
       {/* Header & Filter Tabs */}
       <div style={{
         display: 'flex',
@@ -56,7 +51,6 @@ function AlertsPanel() {
         paddingBottom: '12px',
         borderBottom: '1px solid #f1f5f9'
       }}> 
-        
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <span style={{ fontSize: '18px' }}>{'\u{1F511}'}</span>
           <h3 style={{ margin: 0, fontSize: '15px', fontWeight: '800', color: '#0f172a' }}>
@@ -123,5 +117,4 @@ function AlertsPanel() {
     </div>
   );
 }
-
 export default AlertsPanel;
