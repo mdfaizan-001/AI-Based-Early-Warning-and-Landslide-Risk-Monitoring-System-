@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 function SettingsPanel() {
   const [rainThreshold, setRainThreshold] = useState(75);
   const [moistureThreshold, setMoistureThreshold] = useState(80);
@@ -66,4 +67,5 @@ function SettingsPanel() {
     </div>
   );
 }
+
 export default SettingsPanel;
