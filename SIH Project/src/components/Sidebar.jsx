@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Sidebar({ activeTab, setActiveTab }) {
   const menuItems = [
     { id: 'overview', label: 'Overview', icon: '\u{1F4CA}' },   
@@ -7,8 +6,7 @@ function Sidebar({ activeTab, setActiveTab }) {
     { id: 'alerts', label: 'Active Alerts', icon: '\u{1F6A8}' }, 
     { id: 'analytics', label: 'Analytics', icon: '\u{1F4C8}' },   
     { id: 'settings', label: 'Settings', icon: '\u{2699}' },    
-  ];
-  
+  ]; 
   return (
     <div style={{
       width: '240px',
@@ -23,7 +21,6 @@ function Sidebar({ activeTab, setActiveTab }) {
       flexDirection: 'column',
       boxShadow: '4px 0 10px rgba(0,0,0,0.05)'
     }}>
-      
       {/* Brand Header */}
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '35px', paddingLeft: '8px' }}>
         <span style={{ fontSize: '24px' }}>{'\u{1F30B}'}</span>
