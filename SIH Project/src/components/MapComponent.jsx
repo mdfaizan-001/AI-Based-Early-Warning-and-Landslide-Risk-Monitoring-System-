@@ -2,9 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
 // Custom Marker Icons (SVG/DivIcon based to avoid broken leaflet asset paths)
-
 const createCustomIcon = (color) => {
   return L.divIcon({
     className: 'custom-map-pin',
@@ -20,16 +18,13 @@ const createCustomIcon = (color) => {
     iconAnchor: [10, 10]
   });
 };
-
 const redIcon = createCustomIcon('#dc2626');
 const orangeIcon = createCustomIcon('#d97706');
 const greenIcon = createCustomIcon('#16a34a');
 function MapComponent() {
-  
   // Center coordinates for Himachal Pradesh / NW Himalayan Sector
   const centerPosition = [31.7087, 76.9320];
   const locations = [
-    
     {
       id: 1,
       name: 'Mandi Sector 4',
@@ -40,7 +35,6 @@ function MapComponent() {
       icon: redIcon,
       status: 'Active Landslide Movement Detected'
     },
-    
     {
       id: 2,
       name: 'Shimla Ridge North',
@@ -51,7 +45,6 @@ function MapComponent() {
       icon: orangeIcon,
       status: 'Rainfall threshold near breach'
     },
-    
     {
       id: 3,
       name: 'Dharamshala Zone B',
@@ -63,7 +56,6 @@ function MapComponent() {
       status: 'Slope Stable'
     }
   ];
-  
   return (
     <div style={{
       backgroundColor: '#ffffff',
@@ -73,7 +65,6 @@ function MapComponent() {
       boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
       boxSizing: 'border-box'
     }}> 
-      
       {/* Map Header */}
       <div style={{
         display: 'flex',
@@ -83,7 +74,6 @@ function MapComponent() {
         paddingBottom: '8px',
         borderBottom: '1px solid #f1f5f9'
       }}>
-        
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <span style={{ fontSize: '18px' }}>{'\u{1F5FA}\u{FE0F}'}</span>
           <h3 style={{ margin: 0, fontSize: '15px', fontWeight: '800', color: '#0f172a' }}>
@@ -94,7 +84,6 @@ function MapComponent() {
           CartoDB Topo Layer • Active Telemetry
         </span>
       </div> 
-      
       {/* Map Container */}
       <div style={{
         height: '400px',
@@ -160,8 +149,6 @@ function MapComponent() {
         </MapContainer>
       </div>
     </div>
-  );
-  
+  );  
 }
-
 export default MapComponent;
