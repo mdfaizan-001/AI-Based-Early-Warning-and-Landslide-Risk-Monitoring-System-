@@ -5,6 +5,7 @@ function SettingsPanel() {
   const [moistureThreshold, setMoistureThreshold] = useState(80);
   const [autoAlerts, setAutoAlerts] = useState(true);
   return (
+    
     <div style={{ background: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', maxWidth: '600px' }}>
       <h3 style={{ marginTop: 0, color: '#0f172a' }}>⚙️ Monitoring & Threshold Settings</h3>
       <p style={{ fontSize: '14px', color: '#64748b', marginBottom: '24px' }}>Configure critical risk parameters for triggering automated SMS/Email emergency alerts.</p>
@@ -24,6 +25,7 @@ function SettingsPanel() {
           />
         </div>
         <div>
+          
           <label style={{ display: 'block', fontWeight: '600', fontSize: '14px', color: '#334155', marginBottom: '8px' }}>
             Soil Moisture Saturation Limit (%): <span style={{ color: '#ef4444' }}>{moistureThreshold}%</span>
           </label>
@@ -51,6 +53,7 @@ function SettingsPanel() {
         <button 
           onClick={() => alert('Settings Saved Successfully!')}
           style={{
+            
             marginTop: '10px',
             padding: '10px 20px',
             borderRadius: '8px',
@@ -66,6 +69,7 @@ function SettingsPanel() {
       </div>
     </div>
   );
+  
 }
 
 export default SettingsPanel;
