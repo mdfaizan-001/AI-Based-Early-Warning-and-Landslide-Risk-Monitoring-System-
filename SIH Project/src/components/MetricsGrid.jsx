@@ -1,6 +1,7 @@
 import React from 'react';
 function MetricsGrid() {
   const metrics = [
+    
     {
       title: 'Current Risk Level',
       value: 'HIGH RISK',
@@ -11,6 +12,7 @@ function MetricsGrid() {
       borderColor: '#fca5a5',
       trend: '+12% from last hour'
     },
+    
     {
       title: 'Avg Rainfall Rate',
       value: '45 mm/hr',
@@ -21,6 +23,7 @@ function MetricsGrid() {
       borderColor: '#bae6fd',
       trend: 'Threshold: 75 mm/hr'
     },
+    
     {
       title: 'Soil Moisture Level',
       value: '78%',
@@ -31,7 +34,8 @@ function MetricsGrid() {
       borderColor: '#fde68a',
       trend: 'Safe Limit: <80%'
     }
-  ]; 
+  ];
+  
   return (
     <div style={{
       display: 'grid',
@@ -39,6 +43,7 @@ function MetricsGrid() {
       gap: '20px',
       marginBottom: '24px'
     }}>
+      
       {metrics.map((item, index) => (
         <div
           key={index}
@@ -56,6 +61,7 @@ function MetricsGrid() {
             overflow: 'hidden'
           }}
         > 
+          
           {/* Top Row: Title & Clean Unicode Icon */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={{ fontSize: '13px', fontWeight: '600', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
@@ -73,6 +79,7 @@ function MetricsGrid() {
               {item.icon}
             </span>
           </div>   
+          
           {/* Main Value */}
           <div style={{ margin: '14px 0 10px 0' }}>
             <h2 style={{ margin: 0, fontSize: '28px', fontWeight: '800', color: '#0f172a' }}>
@@ -89,6 +96,7 @@ function MetricsGrid() {
               color: item.color,
               backgroundColor: item.bgColor
             }}>
+              
               {item.status}
             </span>
             <span style={{ fontSize: '11px', color: '#94a3b8', fontWeight: '500' }}>
@@ -100,4 +108,5 @@ function MetricsGrid() {
     </div>
   );
 }
+
 export default MetricsGrid;
