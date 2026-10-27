@@ -1,5 +1,4 @@
 :root {
-  
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
@@ -10,7 +9,6 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
-    
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -28,7 +26,6 @@
     font-size: 16px;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
@@ -47,7 +44,6 @@
     filter: invert(1) brightness(2);
   }
 }
-
 body {
   margin: 0;
 }
@@ -62,7 +58,6 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
-
 h1,
 h2 {
   font-family: var(--heading);
@@ -78,7 +73,6 @@ h1 {
     margin: 20px 0;
   }
 }
-
 h2 {
   font-size: 24px;
   line-height: 118%;
@@ -110,7 +104,6 @@ code {
   transition: all 0.2s ease-in-out;
 }
 body {
-  
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #0f172a;
@@ -121,7 +114,6 @@ div[style*="borderRadius"] {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   
 }
-
 div[style*="borderRadius"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
