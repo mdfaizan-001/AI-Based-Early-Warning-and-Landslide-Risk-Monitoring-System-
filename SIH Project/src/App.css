@@ -1,4 +1,5 @@
 .counter {  
+  
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -15,6 +16,7 @@
     outline-offset: 2px;
   }
 }
+
 .hero {
   position: relative;
   .base,
@@ -23,6 +25,7 @@
     inset-inline: 0;
     margin: 0 auto;
   }
+  
   .base {
     width: 170px;
     position: relative;
@@ -32,6 +35,7 @@
   .vite {
     position: absolute;
   }
+  
   .framework {
     z-index: 1;
     top: 34px;
@@ -39,6 +43,7 @@
     transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
       scale(1.4);
   }
+  
   .vite {
     z-index: 0;
     top: 107px;
@@ -48,6 +53,7 @@
       scale(0.8);
   }
 }
+
 #center {
   display: flex;
   flex-direction: column;
@@ -60,6 +66,7 @@
     gap: 18px;
   }
 }
+
 #next-steps {
   display: flex;
   border-top: 1px solid var(--border);
@@ -81,6 +88,7 @@
     text-align: center;
   }
 }
+
 #docs {
   border-right: 1px solid var(--border);
 
@@ -133,6 +141,7 @@
     }
   }
 }
+
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
@@ -158,4 +167,5 @@
     right: 0;
     border-right-color: var(--border);
   }
+  
 }
