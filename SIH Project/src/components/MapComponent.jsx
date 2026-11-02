@@ -1,91 +1,61 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
-
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
 // Custom Marker Icons (SVG/DivIcon based to avoid broken leaflet asset paths)
-
-const createCustomIcon = (color) => {
-  
+const createCustomIcon = (color) => { 
   return L.divIcon({
-    className: 'custom-map-pin',
-    
+    className: 'custom-map-pin', 
     html: `<div style="
       background-color: ${color};
-      
       width: 14px;
       height: 14px;
-      
       border-radius: 50%;
       border: 3px solid #ffffff;
-      
       box-shadow: 0 0 10px ${color}, 0 2px 6px rgba(0,0,0,0.3);
     "></div>`,
-    
     iconSize: [20, 20],
     iconAnchor: [10, 10]
-    
   });
 };
-
 const redIcon = createCustomIcon('#dc2626');
 const orangeIcon = createCustomIcon('#d97706');
-
 const greenIcon = createCustomIcon('#16a34a');
 function MapComponent() {
-  
   // Center coordinates for Himachal Pradesh / NW Himalayan Sector
-  
   const centerPosition = [31.7087, 76.9320];
   const locations = [
-    
     {
       id: 1,
-      
       name: 'Mandi Sector 4',
       coords: [31.7087, 76.9320],
-      
       risk: 'HIGH RISK',
       moisture: '82%',
-      
       color: '#dc2626',
       icon: redIcon,
-      
       status: 'Active Landslide Movement Detected'
     },
-    
     {
       id: 2,
-      
       name: 'Shimla Ridge North',
       coords: [31.1048, 77.1734],
-      
       risk: 'MODERATE RISK',
       moisture: '74%',
-      
       color: '#d97706',
       icon: orangeIcon,
-      
       status: 'Rainfall threshold near breach'
     },
-    
     {
       id: 3,
-      
       name: 'Dharamshala Zone B',
       coords: [32.2190, 76.3234],
-      
       risk: 'LOW RISK',
       moisture: '58%',
-      
       color: '#16a34a',
       icon: greenIcon,
-      
       status: 'Slope Stable'
     }
   ];
-  
   return (
     <div style={{
       backgroundColor: '#ffffff',
